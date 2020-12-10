@@ -4,8 +4,8 @@ const baseUrlClassicDictionary = 'https://api.dictionaryapi.dev/api/v2/entries/e
 
 // const baseUrlUrbanDictionary = 'https://mashape-community-urban-dictionary.p.rapidapi.com/define'
 
-export function getClassicDictionaryDefinition() {
-  return axios.get(`${baseUrlClassicDictionary}/hello`)
+export function getClassicDictionaryDefinition(wordSearched) {
+  return axios.get(`${baseUrlClassicDictionary}/${wordSearched}`)
 }
 
 // export function getUrbanDictionaryDefinition(urbanOptions) {

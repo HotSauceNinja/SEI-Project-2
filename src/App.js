@@ -1,11 +1,14 @@
+/* eslint-disable indent */
 import React from 'react'
 import axios from 'axios'
 import { getClassicDictionaryDefinition } from '../src/lib/api'
 
+  const wordSearched = 'fairy'
+
 const urbanOptions = {
   method: 'GET',
   url: 'https://mashape-community-urban-dictionary.p.rapidapi.com/define',
-  params: { term: 'fairy' },
+  params: { term: wordSearched },
   headers: {
     'x-rapidapi-key': process.env.REACT_APP_MY_URBAN_API_KEY,
     'x-rapidapi-host': 'mashape-community-urban-dictionary.p.rapidapi.com',
@@ -22,9 +25,10 @@ axios.request(urbanOptions).then(function (response) {
 
 function App() {
 
+
   React.useEffect(() => {
     const getData = async () => {
-      const { data } = await getClassicDictionaryDefinition()
+      const { data } = await getClassicDictionaryDefinition(wordSearched)
       console.log('classic dictionary =', data)
     }
     getData()
