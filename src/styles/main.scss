@@ -1,4 +1,48 @@
+$input-colour: #C4DBE0;
+$classic-colour: #2EB5E0;
+$urban-colour: #0C6980;
+$accent-colour: #191970;
+
 body {
   text-align: center;
+  background: linear-gradient(to left, $urban-colour, $urban-colour 50%, $classic-colour 50%);
+  font-family: 'Roboto', sans-serif;
+}
+
+input {
+  background-color: $input-colour;
+  border-radius: 2px;
+  border: 2px solid $accent-colour;
+  box-shadow: 2px 2px $accent-colour;
+  font-size: 60px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+	margin: 0 auto;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 40%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+}
+
+button {
+  border-radius: 2px;
+  border: 2px solid $accent-colour;
+  box-shadow: 2px 2px $accent-colour;
+  font-size: 60px;
+  font-family: 'Roboto', sans-serif;
+  color: $input-colour;
+  font-size: 1.2rem;
+	margin: 10px auto;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  background-color: $accent-colour;
+  border: none;
+  width: 20%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
 }
 

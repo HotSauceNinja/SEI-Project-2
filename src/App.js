@@ -1,65 +1,74 @@
 /* eslint-disable indent */
+
 import React from 'react'
-import axios from 'axios'
-import { getClassicDictionaryDefinition } from '../src/lib/api'
 
-  const wordSearched = 'fairy'
-
-const urbanOptions = {
-  method: 'GET',
-  url: 'https://mashape-community-urban-dictionary.p.rapidapi.com/define',
-  params: { term: wordSearched },
-  headers: {
-    'x-rapidapi-key': process.env.REACT_APP_MY_URBAN_API_KEY,
-    'x-rapidapi-host': 'mashape-community-urban-dictionary.p.rapidapi.com',
-  },
-}
-
-axios.request(urbanOptions).then(function (response) {
-  console.log(response.data)
-}).catch(function (error) {
-  console.error(error)
-})
-
-
+import { getClassicDictionaryDefinition, getUrbanDictionaryDefinition } from '../src/lib/api'
+import SearchForm from './components/SearchForm'
+import ClassicWordDefinition from './components/ClassicWordDefinition'
+import UrbanWordDefinition from './components/UrbanWordDefinition'
 
 function App() {
 
+  const [wordSearched, setWordSearched] = React.useState('')
+  const [definitions, setDefinitions] = React.useState({
+    classic: null,
+    urban: null,
+  })
 
   React.useEffect(() => {
+    if (!wordSearched) return
+
     const getData = async () => {
-      const { data } = await getClassicDictionaryDefinition(wordSearched)
-      console.log('classic dictionary =', data)
+      const classic = getClassicDictionaryDefinition(wordSearched)
+      const urban = getUrbanDictionaryDefinition(wordSearched)
+      const { data: classicData } = await classic
+      const { data: urbanData } = await urban
+      setDefinitions({ urban: urbanData, classic: classicData[0] })
     }
     getData()
-  }, [])
+    // only want to change when the word changes (onSubmit is when we want to capture whats in the search box)
+  }, [wordSearched])
 
+  const { urban, classic } = definitions
+  // console.log(urban, classic)
+  // console.log('should return the word to define',wordSearched)
+  console.log(urban)
 
   return (
-    <>
+<>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    </head>
+
+    <body>
       <header>
         <h1>WORKING TITLE</h1>
       </header>
-      <main> 
-        <div className="input-box">
-          <h3>Search for your word below</h3>
-          <form>
-            <input className="searchBox" />
-            <button type="submit" className="button">Search!</button>
-          </form>
-        </div>
-        
+
+      <main>
+        <SearchForm setSearchTerm={setWordSearched}/>
         <div className="dictionary-wrapper">
-          <div className="oxford-dictionary">
-            <h2>Oxford content goes here</h2>
+          <div className="classic-dictionary">
+            <h2>Classic content goes here</h2>
+            {!classic ?
+              <p>...loading</p>
+              :
+              <ClassicWordDefinition { ...classic } />
+            }
           </div>
 
           <div className="urban-dictionary">
             <h2>Urban content goes here</h2>
+            {!urban ?
+              <p>...loading</p>
+              :
+              <UrbanWordDefinition { ...urban } />
+            }
           </div>
         </div>
       </main>
-    </>
+      </body>
+  </>
   )
 }
 
