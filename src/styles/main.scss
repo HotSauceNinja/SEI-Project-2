@@ -1,8 +1,13 @@
-// brand colors
+//todo ***** COLOURS *****
 $input-color: #C4DBE0;
 $classic-color: #2EB5E0;
 $urban-color: #0C6980;
 $accent-color: #073D4B;
+
+//todo ***** STYLE *****
+root {
+  width: auto;
+}
 
 body {
   background: linear-gradient(to left, $urban-color, $urban-color 50%, $classic-color 50%);
@@ -11,8 +16,10 @@ body {
   flex-direction: column;
   align-items: center;
   margin: auto;
+  font-family: 'Special Elite', cursive;
   font-family: 'Roboto', sans-serif;
   min-width: 350px;
+  margin: 0 40px;
 
 
   h1 {
@@ -21,35 +28,30 @@ body {
     flex-direction: column;
     font-size: 3rem;
     font-weight: 800;
-    color: $input-color;
-    text-shadow: 2px 3px $accent-color;
+    color: white;
+    text-shadow: 2px 4px $accent-color;
+    font-family: 'Special Elite', cursive;
   }
 
   header {
     width: auto;
-    margin: 30px auto;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   main {
-    width: auto;
-    margin: 30px;
+    width: 80vw;
     display: flex;
     flex-direction: column;
+    margin-left: 100px;
+    margin-right: 100px;
 
+//todo ***** FORM *****
     .search-box-wrapper {
-        margin: 15px;
-        height: 120px;
+        margin: 30px;
         
         .search-box {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: space-between;
-          align-content: center;
-          display: block;
-
           form {
             display: flex;
             justify-content: center;
@@ -67,7 +69,7 @@ body {
               border-radius: 2px;
               box-shadow: 1px 2px rgba(12, 0, 0, 0.6);
               font-size: 1.2rem;
-              color: $input-color;
+              color: white;
               padding: 1rem 2rem;
               margin-left: 5px;
               border-radius: 0.2rem;
@@ -79,42 +81,47 @@ body {
         }
     }
 
+//todo ***** DEFINITIONS *****
     .dictionary-wrapper {
       display: flex;
       flex-direction: row;
-      align-content: center;
-      align-content: space-between;
-      margin: 15px;
 
       .dictionary-content {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        align-content: space-between;
-        padding: 0px 10px;
-        font-weight: normal;
-
+        padding: 0px 10px 0 30px;
       }
+
       .classic-dictionary {
         display: flex;
-        width: 350px;
+        width: 50vw;
         flex-grow: 1;
+        text-shadow: 0.5px 0.5px $input-color;
+        text-align: right;
         p {
           font-size: 30px;
           text-shadow: 2px 2px $input-color;
         }
       }
       .urban-dictionary {
-        color: $input-color;
+        margin-top: 5px;
         display: flex;
-        width: 350px;
+        width: 50vw;
         flex-grow: 1;
+        color: $input-color;
+        text-shadow: 2px 2px $accent-color;
+        text-align: justify;
+        padding-right: 20px;
+      
       p {
         padding-left: 200px;
         font-size: 30px;
-        text-shadow: 2px 2px $accent-color;
+        text-shadow: 2px 3px $accent-color;
       }
       }
     }
   }
+}
+
+#title-font {
+  font-family: 'Special Elite', cursive;
+  font-size: 2em;
 }
