@@ -1,17 +1,30 @@
 import React from 'react'
 
-function ClassicWordDefinition({ word, meanings, phonetics }) {
-
-
+function ClassicWordDefinition({ word, meanings }) {
   return (
-    <>
-      <div>
+
+    <>    
+      <div className="dictionary-content">
         <h2>{word}</h2>
-        <h4>{phonetics[0].text} &nbsp; | &nbsp; {meanings[0].partOfSpeech}</h4>
-        <h4>{meanings[0].definitions[0].definition}</h4>
+        <div className="definitions">
+
+          {meanings.length > 0 ? 
+            meanings.map((meaning, index) => (
+              <div key={index}>
+                {meaning.definitions.map(definition => (
+                  <div key={definition.definition}>{definition.definition}</div>
+                ))}
+                <div><br/></div>
+              </div>
+            ))
+            :
+            <div>I do not know what this word means!</div>
+          }
+
+        </div>
+
       </div>
     </>
   )
 }
-
 export default ClassicWordDefinition

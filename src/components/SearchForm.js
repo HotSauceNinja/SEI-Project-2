@@ -14,12 +14,11 @@ function SearchForm({ setSearchTerm }) {
 
 
   return (
-    <div className="input-box"> 
-      <h3>Search for your word below</h3>
+    <div className="search-box"> 
       <form onSubmit={handleSubmit}>
         <input 
-          className="searchBox"
-          placeholder="Search word"
+          className="input-field"
+          placeholder="Search for a word"
           onChange={handleChange}
         />
         <button type="submit" className="button">Search!</button>

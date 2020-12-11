@@ -1,48 +1,120 @@
-$input-colour: #C4DBE0;
-$classic-colour: #2EB5E0;
-$urban-colour: #0C6980;
-$accent-colour: #191970;
+// brand colors
+$input-color: #C4DBE0;
+$classic-color: #2EB5E0;
+$urban-color: #0C6980;
+$accent-color: #073D4B;
 
 body {
+  background: linear-gradient(to left, $urban-color, $urban-color 50%, $classic-color 50%);
   text-align: center;
-  background: linear-gradient(to left, $urban-colour, $urban-colour 50%, $classic-colour 50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
   font-family: 'Roboto', sans-serif;
-}
+  min-width: 350px;
 
-input {
-  background-color: $input-colour;
-  border-radius: 2px;
-  border: 2px solid $accent-colour;
-  box-shadow: 2px 2px $accent-colour;
-  font-size: 60px;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  font-size: 1.2rem;
-	margin: 0 auto;
-  padding: 1rem 2rem;
-  border-radius: 0.2rem;
-  background-color: rgb(255, 255, 255);
-  border: none;
-  width: 40%;
-  display: block;
-  border-bottom: 0.3rem solid transparent;
-}
 
-button {
-  border-radius: 2px;
-  border: 2px solid $accent-colour;
-  box-shadow: 2px 2px $accent-colour;
-  font-size: 60px;
-  font-family: 'Roboto', sans-serif;
-  color: $input-colour;
-  font-size: 1.2rem;
-	margin: 10px auto;
-  padding: 1rem 2rem;
-  border-radius: 0.2rem;
-  background-color: $accent-colour;
-  border: none;
-  width: 20%;
-  display: block;
-  border-bottom: 0.3rem solid transparent;
-}
+  h1 {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    font-size: 3rem;
+    font-weight: 800;
+    color: $input-color;
+    text-shadow: 2px 3px $accent-color;
+  }
 
+  header {
+    width: auto;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    width: auto;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+
+    .search-box-wrapper {
+        margin: 15px;
+        height: 120px;
+        
+        .search-box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          align-content: center;
+          display: block;
+
+          form {
+            display: flex;
+            justify-content: center;
+            margin-right: 90px;
+
+            input {
+              background-color: $input-color;
+              border-radius: 4px;
+              font-size: 20px;
+              margin-right: 15px;
+              box-shadow: 1px 2px rgba(12, 0, 0, 0.5);
+              padding-left: 12px;
+            }
+            button {
+              border-radius: 2px;
+              box-shadow: 1px 2px rgba(12, 0, 0, 0.6);
+              font-size: 1.2rem;
+              color: $input-color;
+              padding: 1rem 2rem;
+              margin-left: 5px;
+              border-radius: 0.2rem;
+              background-color: $accent-color;
+              border: none;
+              width: 130px;
+            }
+          }
+        }
+    }
+
+    .dictionary-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      align-content: space-between;
+      margin: 15px;
+
+      .dictionary-content {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-content: space-between;
+        padding: 0px 10px;
+        font-weight: normal;
+
+      }
+      .classic-dictionary {
+        display: flex;
+        width: 350px;
+        flex-grow: 1;
+        p {
+          font-size: 30px;
+          text-shadow: 2px 2px $input-color;
+        }
+      }
+      .urban-dictionary {
+        color: $input-color;
+        display: flex;
+        width: 350px;
+        flex-grow: 1;
+      p {
+        padding-left: 200px;
+        font-size: 30px;
+        text-shadow: 2px 2px $accent-color;
+      }
+      }
+    }
+  }
+}

@@ -24,52 +24,47 @@ function App() {
       const { data: classicData } = await classic
       const { data: urbanData } = await urban
       setDefinitions({ urban: urbanData, classic: classicData[0] })
-    }
-    getData()
+  }
+    getData()  
+    
     // only want to change when the word changes (onSubmit is when we want to capture whats in the search box)
   }, [wordSearched])
+
+
 
   const { urban, classic } = definitions
   // console.log(urban, classic)
   // console.log('should return the word to define',wordSearched)
   console.log(urban)
 
-  return (
-<>
-    <head>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
-    </head>
+    return (
+      <>
+          <header>
+            <h1>CONTRA DICTIONARY</h1>
+          </header>
+          <main>
+            <div className="search-box-wrapper">
+              <SearchForm setSearchTerm={setWordSearched}/>
+            </div>
+            <div className="dictionary-wrapper">
+              <div className="classic-dictionary">
+                {!classic ?
+                  <p>CLASSIC <br /> DICTIONARY</p>
+                  :
+                  <ClassicWordDefinition { ...classic } />
+                }
+              </div>
+              <div className="urban-dictionary">
+                {!urban ?
+                  <p>URBAN DICTIONARY</p>
+                  :
+                  <UrbanWordDefinition { ...urban } />
+                }
+              </div>
+            </div>
+          </main>
 
-    <body>
-      <header>
-        <h1>WORKING TITLE</h1>
-      </header>
-
-      <main>
-        <SearchForm setSearchTerm={setWordSearched}/>
-        <div className="dictionary-wrapper">
-          <div className="classic-dictionary">
-            <h2>Classic content goes here</h2>
-            {!classic ?
-              <p>...loading</p>
-              :
-              <ClassicWordDefinition { ...classic } />
-            }
-          </div>
-
-          <div className="urban-dictionary">
-            <h2>Urban content goes here</h2>
-            {!urban ?
-              <p>...loading</p>
-              :
-              <UrbanWordDefinition { ...urban } />
-            }
-          </div>
-        </div>
-      </main>
-      </body>
-  </>
-  )
-}
-
-export default App
+      </>
+    )
+  }
+  export default App
