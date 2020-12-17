@@ -10,6 +10,7 @@ function SearchForm({ setSearchTerm }) {
   const handleSubmit = (event) => {
     event.preventDefault()
     setSearchTerm(formdata)
+    setFormdata('')
   }
 
 
