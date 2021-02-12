@@ -2,7 +2,7 @@
 # ContraDictionary
 by [Sandra Spighel](https://www.linkedin.com/in/sandraspighel/) & [Aislin Bamber](https://www.linkedin.com/in/aislin-bamber/)
 
-![ContraDictionary](link to gif)
+![ContraDictionary](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/ContraDictionary.gif?raw=true)
 
 Deployed Project available [here](https://contradictionary.netlify.app/)
 ## Brief
@@ -28,7 +28,7 @@ The website is mobile-friendly and accessible through the web browser.
 After researching APIs and discussing possible ideas, the top two options we came up with were either using a weather API, or a dictionary API. While doing further research into API options for each of the two, we ran across a classic dictionary API, and the Urban Dictionary API, which gave us the idea of a dual word definition app. 
 
 ## Wireframe
-![Wireframe](link)
+![Wireframe](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/Wireframe.jpg?raw=true)
 
 ## Development
 After setting up a new React app, we started by reading in depth the documentation of each of the two APIs to work out how to get the data. 
@@ -36,9 +36,9 @@ After setting up a new React app, we started by reading in depth the documentati
 ### Classic Dictionary:
 We initially wanted to use the Cambridge Dictionary API, but because accessing the resource could only be done through first requesting an API key via a form that needed to be approved, we had to reorient towards another resource that would be available immediately. 
 
-![Classic Dictionary API](link)
+![Classic Dictionary API](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/classic_api.png?raw=true)
 
-We proceeded with the (unofficial) Google Dictionary API: https://github.com/meetDeveloper/googleDictionaryAPI
+We proceeded with the [(unofficial) Google Dictionary API](https://github.com/meetDeveloper/googleDictionaryAPI)
 
 As per the example in the screen grab above, this is the data a get request returns when searching the word “hello”: 
 ``` 
@@ -98,7 +98,7 @@ As per the example in the screen grab above, this is the data a get request retu
 ``` 
 In order to keep it as close to the Urban Dictionary definitions as possible, we decided to not use any audio, and to display instead the phonetic text along with the word searched at the start of the two definitions:
 
-![phonetic](link)
+![phonetic](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/phonetic.png?raw=true)
 
 Fetching the data was straight-forward, we installed Axios and then wrote a request based on the word searched.
 
@@ -109,7 +109,7 @@ We first had to sign up for an account with Rapid API, through which we could th
 
 We used Axios again, but in order to get data, we had to use a different syntax from what we had previously done in class and homework, which took a while to get our heads around.
 
-![urban_api](link)
+![urban_api](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/urban_api.png?raw=true)
 
 After a few trial and errors, we finally celebrated successfully fetching a word with the correct request:
 
@@ -129,7 +129,7 @@ After a few trial and errors, we finally celebrated successfully fetching a word
 
 ### Showing the definitions on the page
 After successfully logging words, we had to now build the front end to display them on the page, along with their definitions:
-![definitions](link)
+![definitions](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/definitions.png?raw=true)
 
 We decided to use SASS for styling as we both wanted to get more experience with it. We also decided to keep the front clear and minimal, so we don’t distract the viewer from the multiple word meanings and differences which we wanted to emphasize. 
 
@@ -138,7 +138,6 @@ We followed the wireframe structure and allocated the left side of the screen to
 The hardest part was showing the classic definition, as we had to map twice to get all the information we needed: once through the meanings array, and again through the definitions array:
 
 ```
-
        <div className="definitions">
          {meanings.length > 0 ?
            meanings.map((meaning, index) => (
@@ -170,11 +169,11 @@ The hardest part was showing the classic definition, as we had to map twice to g
 ## Bringing it all together:
 We decided for a blue-green colour scheme to use throughout the front end to keep it simple, but also provide enough contrast:
 
-![color_scheme](link)
+![color_scheme](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/color_scheme.png?raw=true)
 
 Finally, we started working on showing results side by side on the page when a word was searched, like this:
 
-![working_title](link)
+![working_title](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/working_title.png?raw=true)
 
 We built a search form where the user can type the word, which is using State to store the word searched:
 
@@ -235,9 +234,9 @@ We used [Special Elite](https://fonts.google.com/specimen/Special+Elite?preview.
 
 Just before the deadline, we also did a few further changes and adjustments using flexbox and added some shading to help with reading visibility of text. 
 
-![no_word_searched](link)
+![no_word_searched](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/no_word_searched.png?raw=true)
 
-![word_searched](link)
+![word_searched](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/word_searched.png?raw=true)
 
 # Final Thoughts and Project Wrap
 ## Wins
@@ -267,4 +266,3 @@ This content does not reflect our views, and our sole intention when creating th
 ## License & copyright
 This project was build for educational purposes. No copyright infringement is intended and all content is used under educational license. 
 [HotSauceNinja](https://github.com/HotSauceNinja)
-
