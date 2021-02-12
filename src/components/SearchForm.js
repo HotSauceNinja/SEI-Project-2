@@ -1,4 +1,5 @@
 import React from 'react'
+import useLocation from 'react'
 
 function SearchForm({ setSearchTerm }) {
 
@@ -13,6 +14,8 @@ function SearchForm({ setSearchTerm }) {
     setFormdata('')
   }
 
+  const location = useLocation()
+  console.log(location)
 
   return (
     <div className="search-box"> 

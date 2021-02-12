@@ -31,7 +31,7 @@ function App() {
 
   const { urban, classic } = definitions
 
-  console.log(urban)
+  // console.log(urban)
 
   return (
     <>

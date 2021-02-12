@@ -7,6 +7,7 @@ const baseUrlUrbanDictionary = 'https://mashape-community-urban-dictionary.p.rap
 export function getClassicDictionaryDefinition(wordSearched) {
   return axios.get(`${baseUrlClassicDictionary}/${wordSearched}`)
 }
+
 export function getUrbanDictionaryDefinition(wordSearched) {
   return axios({
     method: 'GET',
