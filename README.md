@@ -1,5 +1,4 @@
-# SEI-Project-2
-# ContraDictionary
+# SEI-Project-2: ContraDictionary
 by [Sandra Spighel](https://www.linkedin.com/in/sandraspighel/) & [Aislin Bamber](https://www.linkedin.com/in/aislin-bamber/)
 
 ![ContraDictionary](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/ContraDictionary.gif?raw=true)
@@ -34,11 +33,11 @@ After researching APIs and discussing possible ideas, the top two options we cam
 After setting up a new React app, we started by reading in depth the documentation of each of the two APIs to work out how to get the data. 
 
 ### Classic Dictionary:
-We initially wanted to use the Cambridge Dictionary API, but because accessing the resource could only be done through first requesting an API key via a form that needed to be approved, we had to reorient towards another resource that would be available immediately. 
-
-![Classic Dictionary API](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/classic_api.png?raw=true)
+We initially wanted to use the [Cambridge Dictionary API](https://dictionary-api.cambridge.org/), but because accessing the resource could only be done through first requesting an API key via a form that needed to be approved, we had to reorient towards another resource that would be available immediately. 
 
 We proceeded with the [(unofficial) Google Dictionary API](https://github.com/meetDeveloper/googleDictionaryAPI)
+
+![Classic Dictionary API](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/classic_api.png?raw=true)
 
 As per the example in the screen grab above, this is the data a get request returns when searching the word “hello”: 
 ``` 
@@ -96,7 +95,7 @@ As per the example in the screen grab above, this is the data a get request retu
     }
   ]
 ``` 
-In order to keep it as close to the Urban Dictionary definitions as possible, we decided to not use any audio, and to display instead the phonetic text along with the word searched at the start of the two definitions:
+In order to keep it as close to the Urban Dictionary definitions as possible, we decided to not use any audio, and to display instead the phonetic text along with the word searched:
 
 ![phonetic](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/phonetic.png?raw=true)
 
@@ -105,9 +104,13 @@ Fetching the data was straight-forward, we installed Axios and then wrote a requ
 ### Urban Dictionary:
 Accessing the Urban Dictionary was a bit more complicated and took us a good half a day to figure out. 
 
-We first had to sign up for an account with Rapid API, through which we could then access the Urban Dictionary API. 
+We first had to sign up for an account with Rapid API, create a .env file in the root of our project and add our Urban Dictionary secret key in before restarting our server. This was required to be able to access the Urban Dictionary API. 
 
-We used Axios again, but in order to get data, we had to use a different syntax from what we had previously done in class and homework, which took a while to get our heads around.
+We then selected JasvaScript / Axios from the code snippets section and copied the code.
+
+![urban_code](link)
+
+Even though we used Axios again, we had to use a different syntax from what we had previously done in class and homework, which took a while to get our heads around.
 
 ![urban_api](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/urban_api.png?raw=true)
 
@@ -266,4 +269,3 @@ This content does not reflect our views, and our sole intention when creating th
 ## License & copyright
 This project was build for educational purposes. No copyright infringement is intended and all content is used under educational license. 
 [HotSauceNinja](https://github.com/HotSauceNinja)
-
