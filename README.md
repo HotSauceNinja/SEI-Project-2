@@ -108,13 +108,13 @@ We first had to sign up for an account with Rapid API, create a .env file in the
 
 We then selected JasvaScript / Axios from the code snippets section and copied the code.
 
-![urban_code](link)
+![urban_code](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/urban_code.png?raw=true)
 
 Even though we used Axios again, we had to use a different syntax from what we had previously done in class and homework, which took a while to get our heads around.
 
-![urban_api](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/urban_api.png?raw=true)
+![urban_api](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/urban_api2.png?raw=true)
 
-After a few trial and errors, we finally celebrated successfully fetching a word with the correct request:
+After a some trial and error, we finally celebrated successfully fetching a word with the correct request:
 
 ```
   export function getUrbanDictionaryDefinition(wordSearched) {
@@ -207,6 +207,7 @@ function SearchForm({ setSearchTerm }) {
  )
 }
 ```
+
 And then linked everything in App.js by storing wordSearched and definitions in state, and then using useEffect to track changes to the wordSearched so that we can update the definitions when this changes:
 
 ```
@@ -231,11 +232,11 @@ And then linked everything in App.js by storing wordSearched and definitions in 
  }, [wordSearched])
 ```
 
-We then worked to finalise the look of our page. My colleague suggested naming the website Contra Dictionary, which we both thought is a great idea and immediately implemented it.
+We then finalised the look of our page. My colleague suggested naming the website Contra Dictionary, which we both thought is a great idea and immediately implemented it.
 
 We used [Special Elite](https://fonts.google.com/specimen/Special+Elite?preview.text_type=custom) as our main font because it resembled old printing press letters.
 
-Just before the deadline, we also did a few further changes and adjustments using flexbox and added some shading to help with reading visibility of text. 
+Just before the deadline, we also did a few further changes and adjustments using flexbox, and added some shading to help with the readability of the text. 
 
 ![no_word_searched](https://github.com/HotSauceNinja/SEI-Project-2-ContraDictionary/blob/main/src/images/no_word_searched.png?raw=true)
 
@@ -248,24 +249,21 @@ Just before the deadline, we also did a few further changes and adjustments usin
 * The final result looks exactly as we planned it from the start, and we think opting for a minimalist and clean style helps place the emphasis on the most important elements of the page: the words and their definitions
 
 # Known Bugs / Blockers
-* We spent a lot of time researching APIs to find the best one to use. In retrospect, I would select one project from the start, and only then start researching APIs
+* We spent a lot of time researching APIs to find the best one to use. In retrospect, I would select one project from the start, and only then start researching APIs.
 
 * At the start of our project, neither of us was very confident in using React or on the full process of getting information from APIs, which meant we had a very slow work pace and we needed to ask for help a couple of times after we got really stuck (accessing the information from the Urban Dictionary, and trying to fetch information from the Classic Dictionary through a second map). We both feel a lot more confident at the end of the project, and trying to resolve the problems we had throughout helped us get a much better understanding of React and APIs.
 
-* After the deadline, we found small bugs while demonstrating the app to the rest of the class. Given this was a time-limited project meant to showcase our initial understanding of React Hooks and APIs (we started learning React the previous week), we decided to leave the app as is, so it could be a reference of our growth level from this point onwards.
+* After the deadline, we found small bugs while demonstrating the app to the rest of the class. Given this was a time-limited project meant to showcase our initial understanding of React and APIs (we started learning both the previous week), we decided to leave the app as is, so it could be a reference of our growth level from this point onwards.
 
 * The bugs we found are to do with searching for words that have no definitions in the Urban dictionary, in which case the page remains unchanged (either with the previous word searched, or empty if this was the first word searched). 
-To resolve this, it would be required to implement a ternary checking if the word searched existed in the Urban Dictionary API, and display an error message (“Sorry, this word does not have a definition in this dictionary”) if it does not exist. 
+To resolve this, it would be required to implement a ternary checking if the word searched existed in the Urban Dictionary API and displaying its definition, or showing an error message (“Sorry, this word does not have a definition in this dictionary”) if it does not exist. 
 
 # Possible future features:
 * Show random word
 * Show synonims or antonyms with possibility of navigating to their definition
 
 # Disclaimer
-The Urban Dictionary API features content that might at times be upsetting, vulgar or derrogatory. 
-
-This content does not reflect our views, and our sole intention when creating this app was to showcase how words take on different meanings and connotations according to different contexts. 
+The Urban Dictionary API features content that might at times be upsetting, vulgar or derrogatory. This content does not reflect our views, and our sole intention when creating this app was to showcase how words take on different meanings and connotations according to different contexts. 
 
 ## License & copyright
 This project was build for educational purposes. No copyright infringement is intended and all content is used under educational license. 
-[HotSauceNinja](https://github.com/HotSauceNinja)
