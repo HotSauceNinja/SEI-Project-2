@@ -281,7 +281,7 @@ Just before the deadline, we also did a few further changes and adjustments usin
 * The bugs we found are to do with searching for words that have no definitions in the Urban dictionary, in which case the page remains unchanged (either with the previous word searched, or empty if this was the first word searched). 
 To resolve this, it would be required to implement a ternary checking if the word searched existed in the Urban Dictionary API and displaying its definition, or showing an error message (“Sorry, this word does not have a definition in this dictionary”) if it does not exist. 
 
-### Key Learnings:
+### Key Learnings
 * At the start of our project, neither of us was very confident in using React or on the full process of getting information from APIs, which meant we had a very slow work pace and we needed to ask for help a couple of times after we got really stuck (accessing the information from the Urban Dictionary, and trying to fetch information from the Classic Dictionary through a second map). We both feel a lot more confident at the end of the project, and trying to resolve the problems we had throughout helped us get a much better understanding of React and APIs.
 
 * This was the first team project in the course and I was happy to discover that teamworking in coding follows the same rules as team working in any other project. We communicated very well in our team and established clear goals, which sped up our progress.
