@@ -269,9 +269,9 @@ Just before the deadline, we also did a few further changes and adjustments usin
 
 ## Final Thoughts and Project Wrap
 ### Wins
-* We got on really well as a team and both had a very clear idea from the start what we wanted, which helped as we worked together to deliver a cohesive result 
+* We got on really well as a team and both had a very clear idea from the start what we wanted, which helped as we worked together to deliver a cohesive result.
 
-* The final result looks exactly as we planned it from the start, and we think opting for a minimalist and clean style helps place the emphasis on the most important elements of the page: the words and their definitions
+* The final result looks exactly as we planned it from the start, and we think opting for a minimalist and clean style helps place the emphasis on the most important elements of the page: the words and their definitions.
 
 ### Known Bugs / Blockers
 * We spent a lot of time researching APIs to find the best one to use. In retrospect, I would select one project from the start, and only then start researching APIs.
