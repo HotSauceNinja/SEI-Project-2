@@ -286,7 +286,7 @@ To resolve this, it would be required to implement a ternary checking if the wor
 
 * This was the first team project in the course and I was happy to discover that teamworking in coding follows the same rules as team working in any other project. We communicated very well in our team and established clear goals, which sped up our progress.
 
-### Possible future features:
+### Possible future features
 * Show random word
 * Show synonims or antonyms with possibility of navigating to their definition
 
