@@ -23,6 +23,7 @@ by [Sandra Spighel](https://www.linkedin.com/in/sandraspighel/) & [Aislin Bamber
   - [Final Thoughts & Project Wrap](#final-thoughts-and-project-wrap)
     - [Wins](#wins)
     - [Known Bugs / Blockers](#known-bugs-/-blockers)
+    - [Key Learnings](#key-learnings)
     - [Possible future features](#possible-future-features)
   - [Disclaimer](#disclaimer)
   - [License](#license)
@@ -275,19 +276,22 @@ Just before the deadline, we also did a few further changes and adjustments usin
 ### Known Bugs / Blockers
 * We spent a lot of time researching APIs to find the best one to use. In retrospect, I would select one project from the start, and only then start researching APIs.
 
-* At the start of our project, neither of us was very confident in using React or on the full process of getting information from APIs, which meant we had a very slow work pace and we needed to ask for help a couple of times after we got really stuck (accessing the information from the Urban Dictionary, and trying to fetch information from the Classic Dictionary through a second map). We both feel a lot more confident at the end of the project, and trying to resolve the problems we had throughout helped us get a much better understanding of React and APIs.
-
 * After the deadline, we found small bugs while demonstrating the app to the rest of the class. Given this was a time-limited project meant to showcase our initial understanding of React and APIs (we started learning both the previous week), we decided to leave the app as is, so it could be a reference of our growth level from this point onwards.
 
 * The bugs we found are to do with searching for words that have no definitions in the Urban dictionary, in which case the page remains unchanged (either with the previous word searched, or empty if this was the first word searched). 
 To resolve this, it would be required to implement a ternary checking if the word searched existed in the Urban Dictionary API and displaying its definition, or showing an error message (“Sorry, this word does not have a definition in this dictionary”) if it does not exist. 
+
+### Key Learnings:
+* At the start of our project, neither of us was very confident in using React or on the full process of getting information from APIs, which meant we had a very slow work pace and we needed to ask for help a couple of times after we got really stuck (accessing the information from the Urban Dictionary, and trying to fetch information from the Classic Dictionary through a second map). We both feel a lot more confident at the end of the project, and trying to resolve the problems we had throughout helped us get a much better understanding of React and APIs.
+
+* This was the first team project in the course and I was happy to discover that teamworking in coding follows the same rules as team working in any other project. We communicated very well in our team and established clear goals, which sped up our progress.
 
 ### Possible future features:
 * Show random word
 * Show synonims or antonyms with possibility of navigating to their definition
 
 ## Disclaimer
-The Urban Dictionary API features content that might at times be upsetting, vulgar or derrogatory. This content does not reflect our views, and our sole intention when creating this app was to showcase how words take on different meanings and connotations according to different contexts. 
+The Urban Dictionary API features content that might at times be upsetting, vulgar or derogatory. This content does not reflect our views, and our sole intention when creating this app was to showcase how words take on different meanings and connotations according to different contexts. 
 
 ## License & copyright
 This project was build for educational purposes. No copyright infringement is intended and all content is used under educational license. 
