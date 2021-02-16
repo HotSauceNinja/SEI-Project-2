@@ -282,13 +282,13 @@ Just before the deadline, we also did a few further changes and adjustments usin
 To resolve this, it would be required to implement a ternary checking if the word searched existed in the Urban Dictionary API and displaying its definition, or showing an error message (“Sorry, this word does not have a definition in this dictionary”) if it does not exist. 
 
 ### Key Learnings
-* At the start of our project, neither of us was very confident in using React or on the full process of getting information from APIs, which meant we had a very slow work pace and we needed to ask for help a couple of times after we got really stuck (accessing the information from the Urban Dictionary, and trying to fetch information from the Classic Dictionary through a second map). We both feel a lot more confident at the end of the project, and trying to resolve the problems we had throughout helped us get a much better understanding of React and APIs.
+* At the start of our project, neither of us was very confident in using React or on the full process of getting information from APIs, which meant we had a very slow work pace and we needed to ask for help a couple of times after we got really stuck (accessing the information from the Urban Dictionary, and trying to fetch information from the Classic Dictionary through a second map). We both felt a lot more confident at the end of the project, and trying to resolve the problems we had throughout helped us get a much better understanding of React and APIs.
 
 * This was the first team project in the course and I was happy to discover that teamworking in coding follows the same rules as team working in any other project. We communicated very well in our team and established clear goals, which sped up our progress.
 
 ### Possible future features
 * Show random word
-* Show synonims or antonyms with possibility of navigating to their definition
+* Show synonyms or antonyms with possibility of navigating to their definition
 
 ## Disclaimer
 The Urban Dictionary API features content that might at times be upsetting, vulgar or derogatory. This content does not reflect our views, and our sole intention when creating this app was to showcase how words take on different meanings and connotations according to different contexts. 
